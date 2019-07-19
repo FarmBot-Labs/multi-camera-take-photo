@@ -3,7 +3,7 @@
  "language": "python",
  "author": "Farmbot.io",
  "description": "Take a photo with a specific camera (USB only).",
- "version": "0.1.0",
+ "version": "0.1.1",
  "min_os_version_major": 6,
  "url": "https://raw.githubusercontent.com/FarmBot-Labs/multi-camera-take-photo/master/manifest.json",
  "zip": "https://github.com/FarmBot-Labs/multi-camera-take-photo/archive/master.zip",
