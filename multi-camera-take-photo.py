@@ -5,7 +5,7 @@
 import os
 from time import time, sleep
 import cv2
-from farmware_tools import device, get_config_value
+from farmware_tools import device, get_config_value, env
 
 def image_filename():
     'Prepare filename with timestamp.'
@@ -15,10 +15,9 @@ def image_filename():
 
 def upload_path(filename):
     'Filename with path for uploading an image.'
-    try:
-        images_dir = os.environ['IMAGES_DIR']
-    except KeyError:
-        images_dir = '/tmp/images'
+    images_dir = env.Env().images_dir or '/tmp/images'
+    if not os.path.isdir(images_dir):
+        device.log('{} directory does not exist.'.format(images_dir), 'error')
     path = images_dir + os.sep + filename
     return path
 
@@ -49,10 +48,10 @@ def usb_camera_photo(camera_port):
 
     # Output
     if ret:  # an image has been returned by the camera
-        filename = image_filename()
+        filename_path = upload_path(image_filename())
         # Save the image to file
-        cv2.imwrite(upload_path(filename), image)
-        print('Image saved: {}'.format(upload_path(filename)))
+        cv2.imwrite(filename_path, image)
+        print('Image saved: {}'.format(filename_path))
     else:  # no image has been returned by the camera
         device.log('Problem getting image from video{}.'.format(
             camera_port), 'error', ['toast'])
