@@ -5,10 +5,10 @@
  "description": "Take a photo with a specific camera (USB only).",
  "version": "0.1.1",
  "min_os_version_major": 6,
- "url": "https://raw.githubusercontent.com/FarmBot-Labs/multi-camera-take-photo/master/manifest_v1.json",
- "zip": "https://github.com/FarmBot-Labs/multi-camera-take-photo/archive/master.zip",
+ "url": "https://raw.githubusercontent.com/FarmBot-Labs/multi-camera-take-photo/main/manifest_v1.json",
+ "zip": "https://github.com/FarmBot-Labs/multi-camera-take-photo/archive/main.zip",
  "executable": "python",
- "args": ["multi-camera-take-photo-master/multi-camera-take-photo.py"],
+ "args": ["multi-camera-take-photo-main/multi-camera-take-photo.py"],
  "config": [
    {"name": "camera_port", "label": "Camera port (0, 1, 2, 3, etc.)", "value": 0 }
  ]

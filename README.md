@@ -4,7 +4,7 @@ Farmware to take a photo with a specific USB camera (port input).
 ## Install
 [Farmware page](https://my.farm.bot/app/farmware) install URL:
 ```
-https://raw.githubusercontent.com/FarmBot-Labs/multi-camera-take-photo/master/manifest.json
+https://raw.githubusercontent.com/FarmBot-Labs/multi-camera-take-photo/main/manifest.json
 ```
 
 ## Use
